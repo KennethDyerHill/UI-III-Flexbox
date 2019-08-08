@@ -160,140 +160,220 @@ h5 {
 }
 
 
-/* Your code starts here! */
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-.container {
-    width: 880px;
-    /* border: 10px dashed black; */
-    margin: auto;
+* {
+    border: 1px solid black;
 }
 
 header {
-    /* border: 5px dashed orange; */
-    padding: 20px 20px 20px;
+    display: flex;
 }
 
-nav {
-    /* border: 3px solid red; */
-    display: inline-block;
-    width: 75%;
+header nav {
+    display: flex;
 }
 
-nav a {
-    color: grey;
+header nav a {
+    margin-right: 65px;
+    font-size: 14px;
+    color: gray;
     text-decoration: none;
-    padding: 0 25px 0px;
-    /* border: 3px solid blue; */
+    margin-top: 25px;
 }
 
-.intro-container {
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav a:first-child {
+    margin-left: 0;
+}
+
+header nav a:last-child {
+    margin-right: 0;
+}
+
+header .logo {
+    margin-top: 15px;
+    margin-left: 5%;
+}
+
+
+/* cta */
+
+.cta {
+    display: flex;
+}
+
+.cta .cta-text {
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    font-size: 77px;
+    margin-top: 120px;
     text-align: center;
-    /* border: 3px solid green; */
+    padding: 0px 75px;
 }
 
-.intro {
-    /* border: 4px dashed red; */
-    display: inline-block;
-    width: 450px;
-    text-align: center;
-    padding: 0px 0px 40px;
-}
-
-.intro h1 {
-    font-size: 50pt;
-    /* border: 1px dashed red; */
-}
-
-.introimg {
-    width: 30%;
-    /* border: 1px dashed red; */
-    display: inline-block;
-    /* TRBL*/
-    padding: 20px 10px 10px 20px;
-}
-
-.intro button {
-    padding: 5px 40px 5px;
+.cta .cta-text button {
+    background: white;
+    vertical-align: top;
+    margin-top: 6px;
+    padding: 8px 44px;
+    font-size: 17px;
     border: 1px solid black;
-    font-family: 'Titillium Web';
+    cursor: pointer;
 }
 
-header p {
-    text-align: center;
-    border: 1px solid black;
-    width: 150px;
+.cta .cta-text button:hover {
+    background: black;
+    color: white;
 }
 
-.codeimg {
-    width: 30%;
-    height: 30%;
-    /*TRBL*/
-    padding: 0 20px 20px 100px;
+.cta img {
+    display: flex;
+    margin-top: 69px;
 }
 
-.top-content {
+.main-content {
     border-top: 1px solid black;
-    padding: 30px 0 30px;
+    margin-top: 76px;
+    padding-top: 39px;
 }
 
-.top-content .features {
-    display: inline-block;
-    /* border: 1px solid red; */
-    width: 49%;
-    margin-right: 5px;
+.main-content .top-content {
+    padding: 0 10px;
 }
 
-.top-content .about {
-    display: inline-block;
-    /* border: 1px solid red; */
-    width: 49%;
+.main-content .top-content .text-content {
+    width: 410px;
+    display: flex;
 }
 
-.middle-img {
-    display: block;
-    width: 100%;
+.main-content .top-content .text-content:last-child {
+    margin-right: 0;
+}
+
+.main-content .middle-img {
+    margin-top: 45px;
+}
+
+.main-content .bottom-content {
+    margin-top: 37px;
+    padding: 0 10px;
+}
+
+.main-content .bottom-content .text-content {
+    width: 275px;
+    display: flex;
+}
+
+.main-content .bottom-content .text-content:last-child {
+    margin-right: 0;
+}
+
+.contact {
+    margin-top: 57px;
+    border-top: 1px solid black;
+    padding: 39px 10px 0;
+}
+
+.contact p {
+    margin: 20px 0;
+}
+
+footer {
+    margin: 32px 0;
+    text-align: center;
+    font-size: 14px;
 }
 
 .bottom-content {
-    border-bottom: 1px solid black;
-    padding: 20px 0 30px;
+    display: flex;
 }
 
-.bottom-content .services {
-    display: inline-block;
-    width: 32%;
-    /* border: 1px solid red; */
+.top-content {
+    display: flex;
 }
 
-.bottom-content .product {
-    display: inline-block;
-    width: 32%;
-    margin: 0px 10px 0px;
+.text-content {
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1%
 }
 
-.bottom-content .vision {
-    display: inline-block;
-    width: 32%;
+.middle-img {
+    margin: 2%;
 }
 
-.contact-content {
-    margin-top: 30px;
+.services-header-content {
+    display: flex;
+    /* width: 90%; */
+    /* flex-direction: row; */
+    /* margin-top: 10%; */
 }
 
-footer p {
-    text-align: center;
+.services-header-content nav a {
+    /* margin-right: 65px; */
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+    margin-top: 25px;
 }
 
+.services-header-content img {
+    margin-left: 2rem;
+}
 
-/*------------------Services Below-------------------*/
-/* header {
-	display: flex;
-} */
-/* img.sevices-header-img {
-	margin: 0 auto;
-} */
+.services-header img {
+    padding: 2%;
+    max-width: 800px;
+}
 
-/* header h1 {
-	font-size: 26px;
-	margin: 9px -10px;
-} */
+.services-top-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+body {
+    margin: 0 auto;
+    width: 800px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.services-middle-content>div {
+    width: 45%;
+    border: 1px solid black;
+    margin: 1%;
+    padding: 1%;
+}
+
+.services-middle-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services-digital-design>div button {
+    margin: 1%;
+}
+
+.services-bottom-content {
+    display: flex;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 5%;
+    margin-top: 7%;
+}
